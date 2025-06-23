@@ -8,7 +8,8 @@ DATA_PATH = os.path.join(os.getenv("FEED-DATA-PATH", "feed-data"), "greynoise")
 BATCH_SIZE = os.getenv("GREYNOISE_FEED_BATCH_SIZE", 1000)
 # Max results to fetch. Set to 0 for no limit
 MAX_RESULTS = os.getenv("GREYNOISE_FEED_MAX_RESULTS", 10000)
-LOG_LEVEL = os.getenv("GREYNOISE_FEED_LOG_LEVEL", "INFO").upper()
+# Set log level from environment, default to INFO
+LOG_LEVEL = getattr(logging, os.getenv("GREYNOISE_FEED_LOG_LEVEL", "INFO").upper(), logging.INFO)
 
 queries = [
     "classification:malicious last_seen:1d",
@@ -18,7 +19,7 @@ queries = [
 
 # Configure logging
 logging.basicConfig(
-    level=logging.INFO,
+    level=LOG_LEVEL,
     format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
