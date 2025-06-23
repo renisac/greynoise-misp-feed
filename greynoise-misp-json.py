@@ -13,8 +13,7 @@ LOG_LEVEL = getattr(logging, os.getenv("GREYNOISE_FEED_LOG_LEVEL", "INFO").upper
 
 queries = [
     "classification:malicious last_seen:1d",
-    "classification:suspicious last_seen:1d",
-    "classification:benign last_seen:1d"
+    "classification:suspicious last_seen:1d"
 ]
 
 # Configure logging
@@ -123,68 +122,32 @@ def create_greynoise_misp_json_start_end(uuid):
     current_timestamp = str(int(time.time()))
 
     misp_json = {
-        "response": [
-            {
                 "Event": {
-                    "id": "0",
-                    "orgc_id": "1",
-                    "org_id": "1",
                     "date": current_date,
                     "threat_level_id": "4",
                     "info": "GreyNoise Feed",
                     "published": True,
                     "uuid": uuid,
-                    "attribute_count": "",
                     "analysis": "0",
                     "timestamp": current_timestamp,
                     "distribution": "2",
-                    "proposal_email_lock": False,
-                    "locked": False,
                     "publish_timestamp": "0",
-                    "sharing_group_id": "0",
-                    "disable_correlation": False,
-                    "extends_uuid": "",
-                    "protected": None,
-                    "event_creator_email": "feed@greynoise.io",
-                    "Org": {
-                        "id": "1",
-                        "name": "GreyNoise",
-                        "uuid": "0db8495b-917d-4b34-ad2c-be7eeaa19c7f",
-                        "local": True
-                    },
                     "Orgc": {
-                        "id": "1",
-                        "name": "ADMIN",
+                        "name": "GREYNOISE",
                         "uuid": "0db8495b-917d-4b34-ad2c-be7eeaa19c7f",
-                        "local": True
                     },
-                    "Attribute": [],
-                    "ShadowAttribute": [],
-                    "RelatedEvent": [],
-                    "Galaxy": [],
-                    "Object": [],
-                    "EventReport": [],
-                    "CryptographicKey": [],
                     "Tag": [
                         {
-                            "id": "793",
                             "name": "tlp:amber",
                             "colour": "#FFC000",
-                            "exportable": True,
-                            "user_id": "0",
-                            "hide_tag": False,
-                            "numerical_value": None,
-                            "is_galaxy": False,
-                            "is_custom_galaxy": False,
-                            "local_only": False,
                             "local": False,
                             "relationship_type": None
                         }
-                    ]
+                    ],
+                    "Attribute": [],
+                    "Object": []
                 }
             }
-        ]
-    }
 
     json_str = json.dumps(misp_json, indent=4)
     split_token = '"Object": ['
