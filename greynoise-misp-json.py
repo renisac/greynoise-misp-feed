@@ -5,9 +5,9 @@ from greynoise.api import GreyNoise, APIConfig
 # Set your API key securely
 DATA_PATH = os.path.join(os.getenv("FEED-DATA-PATH", "feed-data"), "greynoise")
 #How many results to fetch in each batch. Max 10,000. Used to limit memory usage
-BATCH_SIZE = os.getenv("GREYNOISE_FEED_BATCH_SIZE", 1000)
+BATCH_SIZE = int(os.getenv("GREYNOISE_FEED_BATCH_SIZE", 1000))
 # Max results to fetch. Set to 0 for no limit
-MAX_RESULTS = os.getenv("GREYNOISE_FEED_MAX_RESULTS", 10000)
+MAX_RESULTS = int(os.getenv("GREYNOISE_FEED_MAX_RESULTS", 0))
 # Set log level from environment, default to INFO
 LOG_LEVEL = getattr(logging, os.getenv("GREYNOISE_FEED_LOG_LEVEL", "INFO").upper(), logging.INFO)
 
