@@ -24,6 +24,12 @@
       "misp-attribute": "text",
       "ui-priority": 6
     },
+    "domain": {
+      "description": "GreyNoise Domain",
+      "disable_correlation": false,
+      "misp-attribute": "domain",
+      "ui-priority": 6
+    },
     "first-seen": {
       "description": "First Seen",
       "disable_correlation": true,
@@ -33,7 +39,7 @@
     "ip-src": {
       "description": "Source IP address of the network connection.",
       "misp-attribute": "ip-src",
-      "ui-priority": 6
+      "ui-priority": 7
     },
     "last-seen": {
       "description": "Last Seen",
