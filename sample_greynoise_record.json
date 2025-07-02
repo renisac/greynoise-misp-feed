@@ -1,0 +1,241 @@
+[{
+  "ip": "0.0.0.0",
+  "business_service_intelligence": {
+    "found": false,
+    "category": "",
+    "name": "",
+    "description": "",
+    "explanation": "",
+    "last_updated": "",
+    "reference": "",
+    "trust_level": ""
+  },
+  "internet_scanner_intelligence": {
+    "first_seen": "2017-01-01",
+    "last_seen": "2025-01-01",
+    "found": true,
+    "tags": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "slug": "smbv1-scanner",
+        "name": "SMBv1 Crawler",
+        "description": "IP addresses with this tag have been observed crawling the internet for SMBv1.",
+        "category": "activity",
+        "intention": "suspicious",
+        "references": [
+          "https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cifs/69a29f73-de0c-45a6-a1aa-8ceeea42217f"
+        ],
+        "cves": [],
+        "recommend_block": false,
+        "created": "2021-01-01",
+        "updated_at": "2025-01-01T18:24:00.728324Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "slug": "wannacry-variant-smb-connection-attempt",
+        "name": "WannaCry Variant SMB Connection Attempt",
+        "description": "IP addresses with this tag have been observed attempting to connect to an SMB share associated with WannaCry.",
+        "category": "worm",
+        "intention": "malicious",
+        "references": [
+          "https://logrhythm.com/blog/using-netmon-to-detect-wannacry-initial-exploit-traffic/"
+        ],
+        "cves": [],
+        "recommend_block": true,
+        "created": "2024-01-01",
+        "updated_at": "2025-01-01T18:24:04.285585Z"
+      }
+    ],
+    "actor": "unknown",
+    "spoofable": false,
+    "classification": "malicious",
+    "cves": [],
+    "bot": false,
+    "vpn": false,
+    "vpn_service": "",
+    "tor": false,
+    "metadata": {
+      "asn": "AS00000",
+      "source_country": "Hong Kong",
+      "source_country_code": "HK",
+      "source_city": "Hong Kong",
+      "domain": "example.com",
+      "rdns_parent": "",
+      "rdns_validated": false,
+      "organization": "Technology Co., Ltd.",
+      "category": "hosting",
+      "rdns": "",
+      "os": "",
+      "sensor_count": 531,
+      "sensor_hits": 8433,
+      "region": "Hong Kong",
+      "mobile": false,
+      "single_destination": false,
+      "destination_countries": [
+        "United States",
+        "United Kingdom",
+        "Australia",
+        "Luxembourg",
+        "Netherlands",
+        "Sweden",
+        "Germany",
+        "India",
+        "Mexico",
+        "Peru",
+        "Qatar",
+        "Singapore"
+      ],
+      "destination_country_codes": [
+        "US",
+        "GB",
+        "AU",
+        "LU",
+        "NL",
+        "SE",
+        "DE",
+        "IN",
+        "MX",
+        "PE",
+        "QA",
+        "SG"
+      ],
+      "destination_asns": [
+        "AS20473",
+        "AS14061",
+        "AS174",
+        "AS138915",
+        "AS396982",
+        "AS63949",
+        "AS206804",
+        "AS8075"
+      ],
+      "destination_cities": [
+        "Miami",
+        "Santa Clara",
+        "Elk Grove Village",
+        "London",
+        "Amsterdam",
+        "Kent",
+        "Los Angeles",
+        "Luxembourg",
+        "North Bergen",
+        "Stockholm",
+        "Sydney",
+        "Washington",
+        "Doha",
+        "Frankfurt am Main",
+        "Lima",
+        "Mexico City",
+        "North Charleston",
+        "Piscataway",
+        "Pune",
+        "Singapore"
+      ],
+      "carrier": "",
+      "datacenter": "",
+      "longitude": 114.0000,
+      "latitude": 22.0000
+    },
+    "last_seen_timestamp": "2025-01-01 00:00:46"
+  }
+},
+{
+  "ip": "0.0.0.0",
+  "business_service_intelligence": {
+    "found": false,
+    "category": "",
+    "name": "",
+    "description": "",
+    "explanation": "",
+    "last_updated": "",
+    "reference": "",
+    "trust_level": ""
+  },
+  "internet_scanner_intelligence": {
+    "first_seen": "2020-01-01",
+    "last_seen": "2025-01-01",
+    "found": true,
+    "tags": [
+      {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "slug": "smbv1-scanner",
+        "name": "SMBv1 Crawler",
+        "description": "IP addresses with this tag have been observed crawling the internet for SMBv1.",
+        "category": "activity",
+        "intention": "suspicious",
+        "references": [
+          "https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-cifs/69a29f73-de0c-45a6-a1aa-8ceeea42217f"
+        ],
+        "cves": [],
+        "recommend_block": false,
+        "created": "2021-01-01",
+        "updated_at": "2025-01-01T18:24:00.728324Z"
+      }
+    ],
+    "actor": "unknown",
+    "spoofable": false,
+    "classification": "suspicious",
+    "cves": [],
+    "bot": true,
+    "vpn": false,
+    "vpn_service": "",
+    "tor": false,
+    "metadata": {
+      "asn": "AS00000",
+      "source_country": "India",
+      "source_country_code": "IN",
+      "source_city": "Greater Noida",
+      "domain": "example.com",
+      "rdns_parent": "example.com",
+      "rdns_validated": false,
+      "organization": "ISP AS",
+      "category": "isp",
+      "rdns": "sub.example.com",
+      "os": "",
+      "sensor_count": 26,
+      "sensor_hits": 179,
+      "region": "Uttar Pradesh",
+      "mobile": false,
+      "single_destination": false,
+      "destination_countries": [
+        "United Kingdom",
+        "Germany",
+        "Singapore",
+        "United States",
+        "France",
+        "Japan",
+        "South Korea"
+      ],
+      "destination_country_codes": [
+        "GB",
+        "DE",
+        "SG",
+        "US",
+        "FR",
+        "JP",
+        "KR"
+      ],
+      "destination_asns": [
+        "AS63949",
+        "AS14061",
+        "AS16509",
+        "AS20473",
+        "AS8075"
+      ],
+      "destination_cities": [
+        "London",
+        "Frankfurt am Main",
+        "Singapore",
+        "North Bergen",
+        "Aubervilliers",
+        "Incheon",
+        "Tokyo"
+      ],
+      "carrier": "",
+      "datacenter": "",
+      "longitude": 77.000,
+      "latitude": 28.0000
+    },
+    "last_seen_timestamp": "2025-01-01 00:36:27"
+  }
+}]
